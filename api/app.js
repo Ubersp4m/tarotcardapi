@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cardRoutes = require("./routes/cardRoutes"); // Import modular route handlers
 const errorHandler = require("./middlewares/errorHandler"); // Import error handling middleware
+const cors = require('cors');
 
 dotenv.config();
 const app = express();
@@ -9,6 +10,8 @@ const port = process.env.PORT || 3000; // Use a default port if PORT environment
 const path = require("path");
 
 app.use(express.json());
+// Enable CORS for all routes (allows requests from other origins)
+app.use(cors());
 
 // Serve static files from the 'images' directory at the '/tarotdeck' route
 app.use("/tarotdeck", express.static("images"));

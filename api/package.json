@@ -14,10 +14,13 @@
   "author": "Kushagra Srivastava",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.21.2",
+    "firebase": "^12.7.0",
     "firevue": "^0.1.0",
     "nodemon": "^3.1.10",
+    "vite": "^7.3.0",
     "vuefire": "^3.2.2"
   }
 }
